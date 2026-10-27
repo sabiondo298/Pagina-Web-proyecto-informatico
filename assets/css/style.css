@@ -1,10 +1,6 @@
-body {
-    margin: 0;
-}
-
 .navbar-personalizada {
     background-color: #f8d78f;
     border-bottom: 2px solid #000000;
-    width: 100%;
-    box-sizing: border-box;
+    width: 100vw;
 }
+
