@@ -4,3 +4,66 @@
     width: 100vw;
 }
 
+.gradient-spacer {
+  height: 40px;
+  background: linear-gradient(to bottom, rgb(184, 147, 28) 0%, rgb(221, 195, 79) 100%);
+}
+
+/* Contenedor principal */
+.banner-razas {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Imagen del banner */
+.banner-razas-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.banner-razas-content {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translateY(-50%); /* Centra verticalmente */
+  width: 35%; /* Ocupa el espacio blanco del degradado */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Alinea todo a la izquierda */
+  gap: 12px;
+  z-index: 2;
+}
+
+.banner-razas-content h1 {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 800;
+  font-size: 4.5rem;
+  color: rgb(185, 105, 39)
+}
+
+.banner-razas-content p {
+  font-size: 1rem;
+  color: #555555;
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Huninn", sans-serif;
+}
+
+.banner-razas-btn {
+  display: inline-block;
+  padding: 10px 22px;
+  background-color: #be9d2e; /* Verde acorde a la temática */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+  font-family: sans-serif;
+}
+
+.banner-razas-btn:hover {
+  background-color: #eed12eef;
+}

@@ -3,15 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" href="assets/images/logo.png">
+
     <title>Doggy</title>
 </head>
 <body>
     <header>
 
-<!-- ---------------------------------------Navbar---------------------------------------------- -->
+    <!-- ---------------------------------------Navbar---------------------------------------------- -->
 
         <nav class="navbar md:navbar-expand bg-1 navbar-personalizada fixed-top">
         <div class="container-fluid">
@@ -30,7 +37,7 @@
                 <ul class="nav navbar-nav me-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
                 </li>
 
                 <li class="nav-item">
@@ -52,21 +59,44 @@
                 </ul>
                 <form class="hstack gap-2" role="search">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search"/>
-                <button class=" btn-icon theme-secondary" type="submit">
-                    <img src="assets/images/logo.png"   width="16" height="16">
-                    <svg class="bi" width="16" height="16"><use href="#search" /></svg>
-                </button>
                 </form>
             </div>
             </dialog>
         </div>
         </nav>
-    </header>
     <!-- -----------------------------------------\Navbar------------------------------------------------------------------ -->
 
+    </header>
+    
 
     <main>
-        <img src="assets/images/banner.png" alt="Banner" class="img-fluid w-100">
+
+    <!-- -----------------------------------------Banner Doggy------------------------------------------------------------------ -->
+        <div class="banner-superior">
+            <img src="assets/images/banner.png" alt="Banner" class="img-fluid w-100">
+        </div>
+    <!-- -----------------------------------------/Banner Doggy----------------------------------------------------------------- -->
+
+        <div class="gradient-spacer"></div>
+        
+    <!-- -----------------------------------------Banner Razas------------------------------------------------------------------ -->
+        <div class="banner-razas">
+            <img src="assets/images/banner_razas.png" alt="Banner" class="img-fluid w-100">
+
+            
+            <div class="banner-razas-content">
+                <h1>Doggy</h1>
+                <p>Encuentra tu compañero ideal.</p>
+                <a href="#" class="banner-razas-btn">Ver más</a>
+            </div>
+            </div>
+    <!-- -----------------------------------------/Banner Razas------------------------------------------------------------------ -->
+            
+        </div>
+        
+
+        
+
     </main>
 
 
