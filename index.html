@@ -23,7 +23,7 @@
         <nav class="navbar md:navbar-expand bg-1 navbar-personalizada fixed-top">
         <div class="container-fluid">
 
-            <a class="navbar-brand" href="#">Doggo</a>
+            <a class="navbar-brand" href="index.html">Doggo</a>
             <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false" aria-label="Toggle navigation" >
             <span class="navbar-toggler-icon" aria-hidden="true"></span>
             </button>
@@ -38,23 +38,21 @@
                 <ul class="nav navbar-nav me-auto">
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="#inicio">Inicio</a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Razas</a>
+                    <a class="nav-link" href="#razas">Razas</a>
                 </li>
 
                 <li class="nav-item">
-                    <button class="nav-link" type="button" data-bs-toggle="Donaciones" aria-expanded="false">
-                    Donaciones
-                    </button>
+                    <a class="nav-link" href="#donaciones">Donaciones</a>
                 </li>
 
                 <li class="nav-item">
-                    <button class="nav-link" type="button" data-bs-toggle="Creditos" aria-expanded="false">
+                    <a class="nav-link" href="#creditos">
                     Creditos
-                    </button>
+                    </a>
                 </li>
 
                 </ul>
@@ -74,33 +72,54 @@
     <main>
 
     <!-- -----------------------------------------Banner Doggy------------------------------------------------------------------ -->
-        <div class="banner-superior">
+        <div class="banner-superior" id="inicio">
             <img src="assets/images/banner.png" alt="Banner" class="img-fluid w-100">
         </div>
     <!-- -----------------------------------------/Banner Doggy----------------------------------------------------------------- -->
 
+
         <div class="gradient-spacer"></div>
+    
         
     <!-- -----------------------------------------Banner Razas------------------------------------------------------------------ -->
-        <div class="banner-razas">
+        <div class="banner-razas" id="razas">
             <img src="assets/images/banner_razas.png" alt="Banner" class="img-fluid w-100">
 
             
             <div class="banner-razas-content">
-                <h1>Doggo</h1>
+                <h1>Info</h1>
                 <p>Encuentra tu compañero ideal.</p>
                 <a href="#" class="banner-razas-btn">Ver más</a>
             </div>
             </div>
+        </div>
     <!-- -----------------------------------------/Banner Razas------------------------------------------------------------------ -->
             
+        
+
+    <!-- -----------------------------------------Banner Donaciones------------------------------------------------------------------ -->
+        <div class="banner-donaciones" id="donaciones">
+            <img src="assets/images/banner_donaciones.png" alt="Banner" class="img-fluid w-100">
+
+            
+            <div class="banner-donaciones-content">
+                <h1>Doná</h1>
+                <p>Dona para ayudar a los perros necesitados.</p>
+                <a href="https://bestfriends.org/es" target="_blank" class="banner-donaciones-btn">Ver más</a>
+            </div>
+            </div>
         </div>
-        
+    <!-- -----------------------------------------/Banner Donaciones------------------------------------------------------------------ -->
 
         
-
     </main>
 
+    <div class="creditos" id="creditos">
+        <footer class="footer">
+            <p>Contact us: https://sabiondo298.github.io/</p>
+            <p>© 2026 Doggo - Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
 </body>
