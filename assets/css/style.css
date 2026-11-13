@@ -1,15 +1,33 @@
+/* ---------------------------------------Navbar---------------------------------------------------- */
+
+/* Estructura de la navbar */
 .navbar-personalizada {
     background-color: #f8d78f;
     border-bottom: 2px solid #5a4007;
     width: 100vw;
 }
 
+/* Aplica color al título de la marca, a los enlaces y a los botones que actúan como enlaces en la navbar */
+.navbar-personalizada .navbar-brand,
+.navbar-personalizada .nav-link {
+    color: #443007 !important;
+    font-weight: bold;
+}
+
+/* Efecto hover para todos los elementos interactivos del menú */
+.navbar-personalizada .navbar-brand:hover,
+.navbar-personalizada .nav-link:hover {
+    color: #352504 !important;
+    font-weight: bold;
+}
+
+
 .gradient-spacer {
   height: 40px;
   background: linear-gradient(to bottom, rgb(184, 147, 28) 0%, rgb(221, 195, 79) 100%);
 }
 
-/* Contenedor principal */
+/* ---------------------------------Banner Razas---------------------------------------------------- */
 .banner-razas {
   position: relative;
   width: 100%;
@@ -17,7 +35,6 @@
   overflow: hidden;
 }
 
-/* Imagen del banner */
 .banner-razas-img {
   width: 100%;
   height: auto;
@@ -55,7 +72,7 @@
 .banner-razas-btn {
   display: inline-block;
   padding: 10px 22px;
-  background-color: #be9d2e; /* Verde acorde a la temática */
+  background-color: #be9d2e; 
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -67,3 +84,5 @@
 .banner-razas-btn:hover {
   background-color: #eed12eef;
 }
+
+/* ---------------------------------------------------------------------------------------------------- */
