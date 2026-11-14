@@ -214,6 +214,7 @@ footer {
 .tarjeta-raza {
   display: flex;
   flex-direction: column;
+  text-decoration: none;
   border: 2px solid #5a4007;
   border-radius: 20px;
   overflow: hidden;           /* recorta la imagen con las esquinas redondeadas */
