@@ -244,3 +244,52 @@ footer {
   border-top: 2px solid #5a4007;
 }
 
+
+/* ---------------------------------------Pagina de Raza---------------------------------------------------- */
+
+body {
+  background-color: #ddc18d;
+}
+
+.pagina-raza {
+  padding: 100px 5% 40px; /* espacio para la navbar fija */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Carrusel */
+.carrusel-raza {
+  margin-bottom: 8px;
+}
+
+.carrusel-raza h5 {
+  font-family: "Huninn", sans-serif;
+  color: #443007;
+}
+
+.carrusel-raza img {
+  aspect-ratio: 16 / 9;
+  object-fit: contain;          /* muestra la foto completa, sin recortar */
+  background-color: #f8d78f;    /* color de las franjas que quedan a los costados */
+}
+
+/* Título y descripción */
+.descripcion-raza {
+  margin-top: 32px;
+  text-align: center;
+  font-family: "Huninn", sans-serif;
+  color: #443007;
+}
+
+.descripcion-raza h1 {
+  font-family: "Oooh Baby", cursive;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: rgb(185, 105, 39);
+}
+
+.descripcion-raza p {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  line-height: 1.6;
+}
