@@ -1,26 +1,26 @@
 /* ---------------------------------------Navbar---------------------------------------------------- */
 
 /* Estructura de la navbar */
-.navbar-personalizada {
+.navbarpersonalizada {
     background-color: #f8d78f;
     border-bottom: 2px solid #5a4007;
     width: 100vw;
 }
 
 /* Aplica color al título de la marca, a los enlaces y a los botones que actúan como enlaces en la navbar */
-.navbar-personalizada .navbar-brand{
+.navbarpersonalizada .navbar-brand{
   color: #443007 !important;
   font-family: "Oooh Baby", cursive;
   font-weight: 800;
 }
-.navbar-personalizada .nav-link {
+.navbarpersonalizada .nav-link {
     color: #443007 !important;
     font-weight: bold;
 }
 
 /* Efecto hover para todos los elementos interactivos del menú */
-.navbar-personalizada .navbar-brand:hover,
-.navbar-personalizada .nav-link:hover {
+.navbarpersonalizada .navbar-brand:hover,
+.navbarpersonalizada .nav-link:hover {
     color: #816743 !important;
     font-weight: bold;
 }
@@ -29,7 +29,7 @@
 
 /* ---------------------------------Degradado---------------------------------------------------- */
 
-.gradient-spacer {
+.gradientspacer {
   height: 40px;
   background: linear-gradient(to bottom, rgb(184, 147, 28) 0%, rgb(221, 195, 79) 100%);
 }
@@ -40,20 +40,20 @@
 
 
 /* ---------------------------------Banner Razas---------------------------------------------------- */
-.banner-razas {
+.bannerrazas {
   position: relative;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.banner-razas-img {
+.bannerrazasimg {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.banner-razas-content {
+.bannerrazascontent {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -66,14 +66,14 @@
   z-index: 2;
 }
 
-.banner-razas-content h1 {
+.bannerrazascontent h1 {
   font-family: "Oooh Baby", cursive;
   font-weight: 800;
   font-size: 4.5rem;
   color: rgb(185, 105, 39)
 }
 
-.banner-razas-content p {
+.bannerrazascontent p {
   font-size: 1rem;
   color: #555555;
   margin: 0;
@@ -81,7 +81,7 @@
   font-family: "Huninn", sans-serif;
 }
 
-.banner-razas-btn {
+.bannerrazasbtn {
   display: inline-block;
   padding: 10px 22px;
   background-color: #be9d2e; 
@@ -93,7 +93,7 @@
   font-family: sans-serif;
 }
 
-.banner-razas-btn:hover {
+.bannerrazasbtn:hover {
   background-color: #eed12eef;
 }
 
@@ -105,20 +105,20 @@
 
 
 /* ---------------------------------Banner Donaciones---------------------------------------------------- */
-.banner-donaciones {
+.bannerdonaciones {
   position: relative;
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
 }
 
-.banner-donaciones-img {
+.bannerdonacionesimg {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.banner-donaciones-content {
+.bannerdonacionescontent {
   position: absolute;
   top: 50%;
   left: 5%;
@@ -131,14 +131,14 @@
   z-index: 2;
 }
 
-.banner-donaciones-content h1 {
+.bannerdonacionescontent h1 {
   font-family: "Oooh Baby", cursive;
   font-weight: 800;
   font-size: 4.5rem;
   color: rgb(185, 105, 39)
 }
 
-.banner-donaciones-content p {
+.bannerdonacionescontent p {
   font-size: 1rem;
   color: #555555;
   margin: 0;
@@ -146,7 +146,7 @@
   font-family: "Huninn", sans-serif;
 }
 
-.banner-donaciones-btn {
+.bannerdonacionesbtn {
   display: inline-block;
   padding: 10px 22px;
   background-color: #be9d2e; 
@@ -158,7 +158,7 @@
   font-family: sans-serif;
 }
 
-.banner-donaciones-btn:hover {
+.bannerdonacionesbtn:hover {
   background-color: #eed12eef;
 }
 
@@ -179,7 +179,7 @@ footer {
   text-align: center;
 }
 
-.footer-contact {
+.footercontact {
   display: flex;
   justify-content: center;
   gap: 4px;
@@ -196,11 +196,11 @@ footer {
 
 /* ---------------------------------------Estructura---------------------------------------------------- */
 
-.pagina-razas {
+.paginarazas {
   padding: 100px 5% 40px; /* 100px arriba para que la navbar fija no tape */
 }
 
-.grilla-razas {
+.grillarazas {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
@@ -211,7 +211,7 @@ footer {
 
 /* ---------------------------------------Tarjetas de Razas---------------------------------------------------- */
 
-.tarjeta-raza {
+.tarjetaraza {
   display: flex;
   flex-direction: column;
   text-decoration: none;
@@ -222,19 +222,23 @@ footer {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.tarjeta-raza:hover {
+.tarjetaraza:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.tarjeta-raza img {
+.tarjetaraza img {
   width: 100%;
   aspect-ratio: 4 / 3;        /* todas las fotos con el mismo tamaño */
   object-fit: cover;          /* recorta sin deformar */
   display: block;
 }
 
-.tarjeta-raza span {
+.tarjetaraza span {
+  flex: 1;                      /* ocupa todo el espacio que sobra de la tarjeta */
+  display: flex;
+  align-items: center;          /* centra el nombre verticalmente */
+  justify-content: center;      /* y horizontalmente */
   padding: 12px;
   text-align: center;
   font-family: "Huninn", sans-serif;
@@ -251,44 +255,44 @@ body {
   background-color: #ddc18d;
 }
 
-.pagina-raza {
+.paginaraza {
   padding: 100px 5% 40px; /* espacio para la navbar fija */
   max-width: 1000px;
   margin: 0 auto;
 }
 
 /* Carrusel */
-.carrusel-raza {
+.carruselraza {
   margin-bottom: 8px;
 }
 
-.carrusel-raza h5 {
+.carruselraza h5 {
   font-family: "Huninn", sans-serif;
   color: #443007;
 }
 
-.carrusel-raza img {
+.carruselraza img {
   aspect-ratio: 16 / 9;
   object-fit: contain;          /* muestra la foto completa, sin recortar */
   background-color: #f8d78f;    /* color de las franjas que quedan a los costados */
 }
 
 /* Título y descripción */
-.descripcion-raza {
+.descripcionraza {
   margin-top: 32px;
   text-align: center;
   font-family: "Huninn", sans-serif;
   color: #443007;
 }
 
-.descripcion-raza h1 {
+.descripcionraza h1 {
   font-family: "Oooh Baby", cursive;
   font-weight: 800;
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   color: rgb(185, 105, 39);
 }
 
-.descripcion-raza p {
+.descripcionraza p {
   max-width: 700px;
   margin: 0 auto 24px;
   line-height: 1.6;
