@@ -257,82 +257,83 @@ footer > p {                                /* línea del copyright */
   text-decoration: none;              /* quita el subrayado del enlace */
   border: 2px solid #5a4007;          
   border-radius: 20px;                
+  overflow: hidden;                     /* corta lo que sobresalga del borde redondeado */
   background-color: #fff;             
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* el movimiento y la sombra del hover duran 0.2s, suaves */
 }
 
 .tarjetaraza:hover {                 
-  transform: translateY(-4px);        
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+  transform: translateY(-4px);                  /* la tarjeta sube 4px */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* aparece sombra: sin desplazamiento horizontal, 8px abajo, 16px de difuminado, negro al 20% */
 }
 
-.tarjetaraza img {                    /* la foto de cada tarjeta */
-  width: 100%;                        /* ocupa todo el ancho de la tarjeta */
-  aspect-ratio: 4 / 3;        /* todas las fotos con el mismo tamaño */ /* fuerza una proporción 4:3 */
-  object-fit: cover;          /* recorta sin deformar */ /* la foto llena el recuadro recortando lo que sobra */
+.tarjetaraza img {                    
+  width: 100%;                        
+  aspect-ratio: 4 / 3;                /* fuerza una proporción 4:3 */
+  object-fit: cover;                  /* la foto llena el recuadro recortando lo que sobra */
   display: block;                     /* elimina el espacio extra debajo de la imagen */
 }
 
-.tarjetaraza span {                   /* franja con el nombre de la raza */
-  flex: 1;                      /* ocupa todo el espacio que sobra de la tarjeta */ /* crece hasta llenar el fondo de la tarjeta (evita el espacio blanco) */
-  display: flex;                      /* flexbox interno para centrar el texto */
-  align-items: center;          /* centra el nombre verticalmente */
-  justify-content: center;      /* y horizontalmente */
-  padding: 12px;                      /* 12px de espacio interno */
-  text-align: center;                 /* texto centrado cuando ocupa varias líneas */
-  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
-  font-weight: bold;                  /* negrita */
-  color: #443007;                     /* texto marrón oscuro */
-  background-color: #f8d78f;          /* fondo amarillo claro */
-  border-top: 2px solid #5a4007;      /* línea marrón entre la foto y el nombre */
+.tarjetaraza span {                   
+  flex: 1;                      /* ocupa todo el espacio que sobra de la tarjeta */ 
+  display: flex;                /* flexbox interno para centrar el texto */
+  align-items: center;          
+  justify-content: center;      
+  padding: 12px;                      
+  text-align: center;                 
+  font-family: "Huninn", sans-serif;  
+  font-weight: bold;                  
+  color: #443007;                     
+  background-color: #f8d78f;          
+  border-top: 2px solid #5a4007;      
 }
 
 
 /* ---------------------------- Pagina de cada raza -------------------------------------------*/
 
 body {
-  background-color: #ddc18d;          /* fondo beige/arena para TODAS las páginas del sitio (no solo las de raza) */
+  background-color: #ddc18d;          
 }
 
-.paginaraza {                         /* contenedor principal (<main>) de la página de una raza */
-  padding: 100px 5% 40px; /* espacio para la navbar fija */ /* 100px arriba para que la navbar no tape el contenido, 5% a los lados, 40px abajo */
-  max-width: 1000px;                  /* el contenido no pasa de 1000px de ancho */
+.paginaraza {                         
+  padding: 100px 5% 40px; 
+  max-width: 1000px;                  
   margin: 0 auto;                     /* centrado horizontal */
 }
 
-/* Carrusel */
-.carruselraza {                       /* el carrusel de fotos completo */
+
+.carruselraza {                       
   margin-bottom: 8px;                 /* 8px de espacio debajo */
 }
 
-.carruselraza h5 {                    /* el texto "Fotos" encima del carrusel */
-  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
-  color: #443007;                     /* marrón oscuro, legible sobre el fondo beige */
+.carruselraza h5 {                    /* el texto Fotos */
+  font-family: "Huninn", sans-serif;  
+  color: #443007;                     
 }
 
-.carruselraza img {                   /* cada foto del carrusel */
-  aspect-ratio: 16 / 9;               /* recuadro de proporción 16:9 igual para todas las fotos (el carrusel no cambia de altura) */
-  object-fit: contain;          /* muestra la foto completa, sin recortar */ /* la foto se ve entera, con franjas si no coincide la proporción */
-  background-color: #f8d78f;    /* color de las franjas que quedan a los costados */ /* amarillo que rellena las franjas vacías */
+.carruselraza img {                   
+  aspect-ratio: 16 / 9;               /* recuadro de proporción 16:9 */
+  object-fit: contain;                /* la foto se ve entera, con franjas si no coincide la proporción */
+  background-color: #f8d78f;   
 }
 
-/* Título y descripción */
-.descripcionraza {                    /* sección con nombre y texto de la raza */
+
+.descripcionraza {                    
   margin-top: 32px;                   /* 32px de separación respecto del carrusel */
-  text-align: center;                 /* todo el contenido centrado */
-  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
-  color: #443007;                     /* marrón oscuro */
+  text-align: center;                 
+  font-family: "Huninn", sans-serif;  
+  color: #443007;                     
 }
 
-.descripcionraza h1 {                 /* nombre de la raza (ej: "Husky siberiano") */
-  font-family: "Oooh Baby", cursive;  /* tipografía manuscrita (la "cursiva" del título) */
-  font-weight: 800;                   /* muy grueso */
-  font-size: clamp(2.5rem, 6vw, 4.5rem); /* tamaño adaptable: mínimo 2.5rem, ideal 6% del ancho de pantalla, máximo 4.5rem */
-  color: rgb(185, 105, 39);           /* naranja amarronado */
+.descripcionraza h1 {                 
+  font-family: "Oooh Baby", cursive;  
+  font-weight: 800;                  
+  font-size: clamp(2.5rem, 6vw, 4.5rem); 
+  color: rgb(185, 105, 39);           
 }
 
-.descripcionraza p {                  /* párrafo de descripción de la raza */
-  max-width: 700px;                   /* el texto no pasa de 700px de ancho, para que se lea cómodo */
+.descripcionraza p {                  
+  max-width: 700px;                   
   margin: 0 auto 24px;                /* centrado horizontal (auto) y 24px de espacio abajo, antes del botón */
-  line-height: 1.6;                   /* interlineado amplio para facilitar la lectura */
+  line-height: 1.6;                   
 }
