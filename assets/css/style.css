@@ -1,36 +1,36 @@
-/* ---------------------------------------Navbar---------------------------------------------------- */
-
+/* ------------------------------------------ Navbar ------------------------------------------- */
 /* Estructura de la navbar */
 .navbarpersonalizada {
-    background-color: #f8d78f;
-    border-bottom: 2px solid #5a4007;
-    width: 100vw;
+    background-color: #f8d78f;       
+    border-bottom: 2px solid #5a4007; 
+    width: 100vw;                     /* ancho = 100% del ancho de la ventana (viewport) */
 }
 
-/* Aplica color al título de la marca, a los enlaces y a los botones que actúan como enlaces en la navbar */
+
 .navbarpersonalizada .navbar-brand{
-  color: #443007 !important;
-  font-family: "Oooh Baby", cursive;
-  font-weight: 800;
+  color: #443007 !important;          /* !important gana sobre los estilos de Bootstrap */
+  font-family: "Oooh Baby", cursive; 
+  font-weight: 800;                   /* letra muy gruesa */
 }
 .navbarpersonalizada .nav-link {
-    color: #443007 !important;
-    font-weight: bold;
+    color: #443007 !important;       
+    font-weight: bold;                /* negrita */
 }
 
 /* Efecto hover para todos los elementos interactivos del menú */
-.navbarpersonalizada .navbar-brand:hover,
-.navbarpersonalizada .nav-link:hover {
-    color: #816743 !important;
-    font-weight: bold;
+.navbarpersonalizada .navbar-brand:hover,  
+.navbarpersonalizada .nav-link:hover {     
+    color: #816743 !important;        
+    font-weight: bold;                /* mantiene la negrita */
 }
 
 
 
-/* ---------------------------------Degradado---------------------------------------------------- */
+/* ------------------------------------------ Degradado ------------------------------------------- */
+
 
 .gradientspacer {
-  height: 40px;
+  height: clamp(12px, 3vw, 40px);    /* de 12px en celular a 40px en pantallas grandes */
   background: linear-gradient(to bottom, rgb(184, 147, 28) 0%, rgb(221, 195, 79) 100%);
 }
 
@@ -39,62 +39,52 @@
 
 
 
-/* ---------------------------------Banner Razas---------------------------------------------------- */
+/* ------------------------------------------- Banner razas ------------------------------------------- */
+
 .bannerrazas {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  position: relative;                 /* permite posicionar el texto encima de la imagen usando este div como referencia */
+  width: 100%;                        
+  margin: 0 auto;                     /* centra el bloque horizontalmente */
 }
 
-.bannerrazasimg {
-  width: 100%;
-  height: auto;
-  display: block;
+.bannerrazascontent {                 
+  position: absolute;                 /* se coloca libremente encima de la imagen */
+  top: 50%;                           /* su borde superior queda en la mitad del alto del banner */
+  left: 5%;                           /* separada 5% del borde izquierdo */
+  transform: translateY(-50%);        /* Centra verticalmente */ /* sube la caja la mitad de su propio alto para quedar centrada */
+  width: 35%;                         /* Ocupa el espacio blanco del degradado */ 
+  display: flex;                      /* activa flexbox para ordenar los elementos internos */
+  flex-direction: column;             
+  align-items: flex-start;            /* cada elemento pegado al lado izquierdo de la caja */
+  z-index: 2;                         /* para asegurar que quede por encima de la imagen */
 }
 
-.bannerrazascontent {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%); /* Centra verticalmente */
-  width: 35%; /* Ocupa el espacio blanco del degradado */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Alinea todo a la izquierda */
-  gap: 12px;
-  z-index: 2;
+.bannerrazascontent h1 {             
+  font-family: "Oooh Baby", cursive;  
+  font-weight: 800;                   
+  color: rgb(185, 105, 39)            
 }
 
-.bannerrazascontent h1 {
-  font-family: "Oooh Baby", cursive;
-  font-weight: 800;
-  font-size: 4.5rem;
-  color: rgb(185, 105, 39)
+.bannerrazascontent p {               /* texto "Encuentra tu compañero ideal." */
+  color: #555555;                     /* gris oscuro */
+  margin: 0;                          /* quita el margen que trae por defecto */
+  line-height: 1.4;                   /* interlineado */
+  font-family: "Huninn", sans-serif;  
 }
 
-.bannerrazascontent p {
-  font-size: 1rem;
-  color: #555555;
-  margin: 0;
-  line-height: 1.4;
-  font-family: "Huninn", sans-serif;
+.bannerrazasbtn {                     
+  display: inline-block;              
+  background-color: #be9d2e;         
+  color: #ffffff;                     
+  text-decoration: none;              /* quita el subrayado del enlace */
+  font-weight: bold;                  
+  border-radius: 6px;                 /* esquinas levemente redondeadas */
+  transition: background-color 0.3s ease; /* el cambio de color al pasar el mouse dura 0.3 segundos, suave */
+  font-family: "Huninn", sans-serif;          
 }
 
-.bannerrazasbtn {
-  display: inline-block;
-  padding: 10px 22px;
-  background-color: #be9d2e; 
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  font-family: sans-serif;
-}
-
-.bannerrazasbtn:hover {
-  background-color: #eed12eef;
+.bannerrazasbtn:hover {               
+  background-color: #eed12eef;        
 }
 
 
@@ -104,85 +94,136 @@
 
 
 
-/* ---------------------------------Banner Donaciones---------------------------------------------------- */
+/* --------------------------------------------- Banner donaciones ------------------------------------------- */
 .bannerdonaciones {
-  position: relative;
-  width: 100%;
-  margin: 0 auto;
-  overflow: hidden;
+  position: relative;                 
+  width: 100%;                        
+  margin: 0 auto;                     
 }
 
-.bannerdonacionesimg {
-  width: 100%;
-  height: auto;
-  display: block;
+.bannerdonacionescontent {            
+  position: absolute;                 /* flota encima de la imagen */
+  top: 50%;                           
+  left: 5%;                           
+  transform: translateY(-50%);        /* Centra verticalmente */ 
+  width: 35%;                         /* Ocupa el espacio blanco del degradado */ 
+  display: flex;                      /* flexbox para ordenar el contenido */
+  flex-direction: column;             /* contenido apilado en vertical */
+  align-items: flex-start;            /* Alinea todo a la izquierda */ 
+  z-index: 2;                         
 }
 
+.bannerdonacionescontent h1 {         
+  font-family: "Oooh Baby", cursive;  
+  font-weight: 800;                  
+  color: rgb(185, 105, 39)           
+}
+
+.bannerdonacionescontent p {          
+  color: #555555;                     
+  margin: 0;                          /* sin margen por defecto */
+  line-height: 1.4;                   
+  font-family: "Huninn", sans-serif; 
+}
+
+.bannerdonacionesbtn {                
+  display: inline-block;              /* se ajusta al contenido */
+  background-color: #be9d2e;          
+  color: #ffffff;                    
+  text-decoration: none;              
+  font-weight: bold;                  /* negrita */
+  border-radius: 6px;                 /* esquinas redondeadas */
+  transition: background-color 0.3s ease; /* cambio de color suave de 0.3s */
+  font-family: "Huninn", sans-serif;            
+}
+
+.bannerdonacionesbtn:hover {          
+  background-color: #eed12eef;       
+}
+
+
+
+/* ------------------------------------------ Banners responsivos ------------------------------------------- */
+
+.bannerrazascontent,
 .bannerdonacionescontent {
-  position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%); /* Centra verticalmente */
-  width: 35%; /* Ocupa el espacio blanco del degradado */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Alinea todo a la izquierda */
-  gap: 12px;
-  z-index: 2;
+  gap: clamp(4px, 1.2vw, 12px);              /* la separación entre título, texto y botón se achica */
 }
 
+.bannerrazascontent h1,
 .bannerdonacionescontent h1 {
-  font-family: "Oooh Baby", cursive;
-  font-weight: 800;
-  font-size: 4.5rem;
-  color: rgb(185, 105, 39)
+  font-size: clamp(1.5rem, 6vw, 4.5rem);     /* de 24px en celular hasta 72px en pantallas grandes */
+  line-height: 1;                            
+  margin: 0;                                 
 }
 
+.bannerrazascontent p,
 .bannerdonacionescontent p {
-  font-size: 1rem;
-  color: #555555;
-  margin: 0;
-  line-height: 1.4;
-  font-family: "Huninn", sans-serif;
+  font-size: clamp(0.65rem, 1.5vw, 1rem);    /* el texto se achica hasta un mínimo legible */
 }
 
+.bannerrazasbtn,
 .bannerdonacionesbtn {
-  display: inline-block;
-  padding: 10px 22px;
-  background-color: #be9d2e; 
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-  font-family: sans-serif;
-}
-
-.bannerdonacionesbtn:hover {
-  background-color: #eed12eef;
+  padding: clamp(4px, 0.8vw, 10px) clamp(10px, 1.8vw, 22px); /* el botón se hace más chico */
+  font-size: clamp(0.65rem, 1.5vw, 1rem);                    
 }
 
 
 
-
-
-
-/* ---------------------------------------Footer---------------------------------------------------- */
+/* -------------------------- Footer -------------------------------------*/
 
 footer {
   min-height: 100px;
-  padding: 24px;
+  padding: clamp(16px, 3vw, 24px) 5%;       /* el espacio vertical se achica en celular */
   background-color: #f8d78f;
   border-top: 4px solid #5a4007;
   color: #443007;
   font-family: "Huninn", sans-serif;
   text-align: center;
+  font-size: clamp(0.75rem, 3.2vw, 1rem);   /* el texto del footer se adapta al ancho */
 }
 
-.footercontact {
+footer > p {                                /* línea del copyright */
+  margin: 0;                                /* quita el margen por defecto */
+}
+
+/* Celular (base): todo en columna */
+.footercontent {
   display: flex;
-  justify-content: center;
-  gap: 4px;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.footercontent a {
+  color: #443007;
+  font-weight: bold;
+  overflow-wrap: anywhere;                  /* si el link no entra, se corta en vez de desbordar */
+}
+
+.footercontent a:hover {
+  color: #241275;                           
+}
+
+.footercontent p {                          /* el // */
+  margin: 0;
+}
+
+/* Tablet y computadora: una sola fila -> Contactanos: link // link */
+@media (min-width: 768px) {
+  .footercontent {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;                      /* nada baja de línea */
+    gap: 12px;
+    font-size: clamp(0.7rem, 1.7vw, 1rem);  /* se achica si el ancho es justo */
+  }
+
+  .footercontent a {
+    white-space: nowrap;                    /* cada link en una sola línea */
+  }
 }
 
 
@@ -190,110 +231,108 @@ footer {
 
 
 
-
-/* ---------------------------------------Razas.HTML---------------------------------------------------- */
+/*------------------------------------------ razas.html-------------------------------------------*/
 
 
 /* ---------------------------------------Estructura---------------------------------------------------- */
 
-.paginarazas {
-  padding: 100px 5% 40px; /* 100px arriba para que la navbar fija no tape */
+.paginarazas {                        
+  padding: 100px 5% 40px; 
 }
 
-.grillarazas {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  max-width: 1000px;
-  margin: 0 auto;
+.grillarazas {                        
+  display: grid;                      /* activa CSS Grid: distribuye en filas y columnas */
+  grid-template-columns: repeat(3, 1fr); /* 3 columnas de igual ancho, a cada una le asignas una fraccion de espacio*/
+  gap: 24px;                          /* 24px de separación entre tarjetas (filas y columnas) */
+  max-width: 1000px;                  /* la grilla no pasa de 1000px de ancho */
+  margin: 0 auto;                     /* centra la grilla horizontalmente */
 }
 
 
 /* ---------------------------------------Tarjetas de Razas---------------------------------------------------- */
 
-.tarjetaraza {
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  border: 2px solid #5a4007;
-  border-radius: 20px;
-  overflow: hidden;           /* recorta la imagen con las esquinas redondeadas */
-  background-color: #fff;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.tarjetaraza {                       
+  display: flex;                      /* flexbox para apilar imagen y nombre */
+  flex-direction: column;             /* imagen arriba, nombre abajo */
+  text-decoration: none;              /* quita el subrayado del enlace */
+  border: 2px solid #5a4007;          
+  border-radius: 20px;                
+  background-color: #fff;             
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* el movimiento y la sombra del hover duran 0.2s, suaves */
 }
 
-.tarjetaraza:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.tarjetaraza:hover {                 
+  transform: translateY(-4px);        
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
-.tarjetaraza img {
-  width: 100%;
-  aspect-ratio: 4 / 3;        /* todas las fotos con el mismo tamaño */
-  object-fit: cover;          /* recorta sin deformar */
-  display: block;
+.tarjetaraza img {                    /* la foto de cada tarjeta */
+  width: 100%;                        /* ocupa todo el ancho de la tarjeta */
+  aspect-ratio: 4 / 3;        /* todas las fotos con el mismo tamaño */ /* fuerza una proporción 4:3 */
+  object-fit: cover;          /* recorta sin deformar */ /* la foto llena el recuadro recortando lo que sobra */
+  display: block;                     /* elimina el espacio extra debajo de la imagen */
 }
 
-.tarjetaraza span {
-  flex: 1;                      /* ocupa todo el espacio que sobra de la tarjeta */
-  display: flex;
+.tarjetaraza span {                   /* franja con el nombre de la raza */
+  flex: 1;                      /* ocupa todo el espacio que sobra de la tarjeta */ /* crece hasta llenar el fondo de la tarjeta (evita el espacio blanco) */
+  display: flex;                      /* flexbox interno para centrar el texto */
   align-items: center;          /* centra el nombre verticalmente */
   justify-content: center;      /* y horizontalmente */
-  padding: 12px;
-  text-align: center;
-  font-family: "Huninn", sans-serif;
-  font-weight: bold;
-  color: #443007;
-  background-color: #f8d78f;
-  border-top: 2px solid #5a4007;
+  padding: 12px;                      /* 12px de espacio interno */
+  text-align: center;                 /* texto centrado cuando ocupa varias líneas */
+  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
+  font-weight: bold;                  /* negrita */
+  color: #443007;                     /* texto marrón oscuro */
+  background-color: #f8d78f;          /* fondo amarillo claro */
+  border-top: 2px solid #5a4007;      /* línea marrón entre la foto y el nombre */
 }
 
 
-/* ---------------------------------------Pagina de Raza---------------------------------------------------- */
+/* ---------------------------- Pagina de cada raza -------------------------------------------*/
 
 body {
-  background-color: #ddc18d;
+  background-color: #ddc18d;          /* fondo beige/arena para TODAS las páginas del sitio (no solo las de raza) */
 }
 
-.paginaraza {
-  padding: 100px 5% 40px; /* espacio para la navbar fija */
-  max-width: 1000px;
-  margin: 0 auto;
+.paginaraza {                         /* contenedor principal (<main>) de la página de una raza */
+  padding: 100px 5% 40px; /* espacio para la navbar fija */ /* 100px arriba para que la navbar no tape el contenido, 5% a los lados, 40px abajo */
+  max-width: 1000px;                  /* el contenido no pasa de 1000px de ancho */
+  margin: 0 auto;                     /* centrado horizontal */
 }
 
 /* Carrusel */
-.carruselraza {
-  margin-bottom: 8px;
+.carruselraza {                       /* el carrusel de fotos completo */
+  margin-bottom: 8px;                 /* 8px de espacio debajo */
 }
 
-.carruselraza h5 {
-  font-family: "Huninn", sans-serif;
-  color: #443007;
+.carruselraza h5 {                    /* el texto "Fotos" encima del carrusel */
+  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
+  color: #443007;                     /* marrón oscuro, legible sobre el fondo beige */
 }
 
-.carruselraza img {
-  aspect-ratio: 16 / 9;
-  object-fit: contain;          /* muestra la foto completa, sin recortar */
-  background-color: #f8d78f;    /* color de las franjas que quedan a los costados */
+.carruselraza img {                   /* cada foto del carrusel */
+  aspect-ratio: 16 / 9;               /* recuadro de proporción 16:9 igual para todas las fotos (el carrusel no cambia de altura) */
+  object-fit: contain;          /* muestra la foto completa, sin recortar */ /* la foto se ve entera, con franjas si no coincide la proporción */
+  background-color: #f8d78f;    /* color de las franjas que quedan a los costados */ /* amarillo que rellena las franjas vacías */
 }
 
 /* Título y descripción */
-.descripcionraza {
-  margin-top: 32px;
-  text-align: center;
-  font-family: "Huninn", sans-serif;
-  color: #443007;
+.descripcionraza {                    /* sección con nombre y texto de la raza */
+  margin-top: 32px;                   /* 32px de separación respecto del carrusel */
+  text-align: center;                 /* todo el contenido centrado */
+  font-family: "Huninn", sans-serif;  /* tipografía Huninn */
+  color: #443007;                     /* marrón oscuro */
 }
 
-.descripcionraza h1 {
-  font-family: "Oooh Baby", cursive;
-  font-weight: 800;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  color: rgb(185, 105, 39);
+.descripcionraza h1 {                 /* nombre de la raza (ej: "Husky siberiano") */
+  font-family: "Oooh Baby", cursive;  /* tipografía manuscrita (la "cursiva" del título) */
+  font-weight: 800;                   /* muy grueso */
+  font-size: clamp(2.5rem, 6vw, 4.5rem); /* tamaño adaptable: mínimo 2.5rem, ideal 6% del ancho de pantalla, máximo 4.5rem */
+  color: rgb(185, 105, 39);           /* naranja amarronado */
 }
 
-.descripcionraza p {
-  max-width: 700px;
-  margin: 0 auto 24px;
-  line-height: 1.6;
+.descripcionraza p {                  /* párrafo de descripción de la raza */
+  max-width: 700px;                   /* el texto no pasa de 700px de ancho, para que se lea cómodo */
+  margin: 0 auto 24px;                /* centrado horizontal (auto) y 24px de espacio abajo, antes del botón */
+  line-height: 1.6;                   /* interlineado amplio para facilitar la lectura */
 }
