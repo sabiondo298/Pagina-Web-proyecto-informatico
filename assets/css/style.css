@@ -10,11 +10,11 @@
 .navbarpersonalizada .navbar-brand{
   color: #443007 !important;          /* !important gana sobre los estilos de Bootstrap */
   font-family: "Oooh Baby", cursive; 
-  font-weight: 800;                   /* letra muy gruesa */
+  font-weight: 800;                     /* letra muy gruesa */
 }
 .navbarpersonalizada .nav-link {
     color: #443007 !important;       
-    font-weight: bold;                /* negrita */
+    font-weight: bold;                  /* negrita */
 }
 
 /* Efecto hover para todos los elementos interactivos del menú */
@@ -33,10 +33,6 @@
   height: clamp(12px, 3vw, 40px);    /* de 12px en celular a 40px en pantallas grandes */
   background: linear-gradient(to bottom, rgb(184, 147, 28) 0%, rgb(221, 195, 79) 100%);
 }
-
-
-
-
 
 
 /* ------------------------------------------- Banner razas ------------------------------------------- */
